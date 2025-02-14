@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-xl bg_yellow shadow-sm p-3">
+            <div class="container-fluid container-xl">
+              <button class="navbar-toggler ms-3 " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link mx-1" href="#">خانه</a>
+                  <a class="nav-link mx-1" href="#">مشخصات فردی</a>
+                  <a class="nav-link mx-1" href="#">توانایی ها</a>
+                  <div class="dropdown">
+                    <a class="dropdown-toggle nav-link mx-1" data-bs-toggle="dropdown">
+                        پروژه ها
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">python</a></li>
+                      <li><a class="dropdown-item" href="#">java script</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <button class="bg-transparent border-1 rounded-2 p-2 me-3">
+                    <a class="text-dark" href="#">درخواست همکاری</a>
+                </button>
+              </div>
+            </div>
+        </nav>  
+        <nav style="--bs-breadcrumb-divider: '';" class="container-fluid container-xl breadcrumb p-5 d-flex">
+            <ul class="breadcrumb  position-relative d-flex">
+                <li class="breadcrumb-item bg_gray p-2 me-2 d-inline-flex">
+                    <a href="">خانه</a>
+                </li>
+                <li class="breadcrumb-item active bg_gray p-2 d-inline-flex">
+                    <a href="">پروژه ها</a>
+                </li>
+            </ul>
+        </nav>    
+        <main>
+          <div class="container-fluid container-xl d-flex flex-column">
+            <div class="d-flex flex-column">
+              <h3>پروژه های من</h3>
+              <ul class="m-4">
+                <li class="m-2">
+                  <a href="#" onclick="showCode('project1')" class="d-flex align-items-center fb h5">
+                    <i class="fa-brands fa-python"></i>
+                    ذخیره سازی تغییرات</a>
+                  <p class="m-2 text-black-50">توضیحات</p>
+                </li>
+                <li class="m-2">
+                  <a href="#" onclick="showCode('project2')" class="d-flex align-items-center fb h5" >
+                    <i class="fa-brands fa-python me-2"></i>
+                    ذخیره سازی تغییرات</a>
+                    <p class="m-3 text-black-50">این کد برای ذخیره سازی تغییرات کدها مناسب است بدین صورت که بر اساس تاریخ و زمان فولدری ایجاد میکند و هرتغییر را در یک فایل txt ذخیره میکند.</p>
+                </li>
+                <li class="m-2">
+                  <a href="#" onclick="showCode('project3')" class="d-flex align-items-center fb h5">
+                    <i class="fa-brands fa-js"></i>
+                    ذخیره سازی تغییرات</a>
+                </li>
+              </ul>
+            </div>
+            
+            <pre dir="auto" class="bg_gray py-4 code_box">
+              <code id="code-content" class="text-black-50 fs-6 fw-bold">برای مشاهده کد روی پروژه مد نظر کلیک کنید</code>
+            </pre>
+            <div class="d-flex">
+              <button type="button" class="btn btn-warning ms-3 disabled" id="btnCopy" onclick="copyCode()">کپی کد</button>
+              <a href="" target="_blank" class="btn btn-warning ms-4 disabled" id="btnGit">مشاهده git</a>
+            </div>
+            
+          </div>
+          
+        </main>    
+    </header>
+
+    <main>
+    </main>
+
+    <footer class="mt-5 p-4">
+      <div class="container-fluid container-xl">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center m-2">
+            <div class="profile_cotainer me-3">
+              <img class="profile_img" src="./img/profile.jpg" alt="">
+            </div>
+            <ul>
+              <li>
+                <h4>نوید صالحی هستم</h4>
+              </li>
+              <li>
+                <p>برنامه نویس وب</p>
+              </li>
+            </ul>
+          </div> 
+          <div class="d-flex flex-column">
+            <div class="d-flex">
+              <i class="fa-solid fa-phone mx-3"></i>
+              <p>شماره تماس</p>
+            </div>
+            <p class="ps-3">09128391641</p>
+          </div>
+          <div class="d-flex flex-column">
+            <p>راه های ارتباطی با من</p>
+            <div class="d-flex gap-2 ">
+              <a href="https://t.me/navidslh" target="_blank">
+                <i class="fa-brands fa-telegram" ></i>
+              </a>
+              <a href="https://instagram.com/navidslh" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+              
+              
+              
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </footer>
+    <script src="js/bootstarp.js"></script>
+    <script src="./js/fontawesome/all.js"></script>
+    <script src="./js/js.js"></script>
+</body>
+</html>
