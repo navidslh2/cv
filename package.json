@@ -1,0 +1,29 @@
+{
+  "name": "my-rezume-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/navidslh2/cv.git"
+  },
+  "keywords": [
+    "rezume",
+    "cv",
+    "frontend",
+    "html&caa",
+    "javascript"
+  ],
+  "author": "Navid Salehi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/navidslh2/cv/issues"
+  },
+  "homepage": "https://github.com/navidslh2/cv#readme",
+  "description": "personal rezume website",
+  "dependencies": {
+    "swiper": "^11.2.4"
+  }
+}

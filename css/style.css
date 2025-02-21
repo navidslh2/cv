@@ -9,6 +9,7 @@
     --yellow-color: #ffb93a;
     --footer-color: #454545;
     --gray-color:#ecececd8;
+    --hover-color:#0b5091e7;
 }
 *{
     margin: 0;
@@ -42,8 +43,29 @@ a {
     right: 0;
     width: 100%;
 }
-/* start header style*/
-.navbar-nav .nav-link {
+.hover_blue{
+  width: fit-content;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+.hover_blue:hover {
+    color: var(--hover-color) !important;
+}
+/* @media screen and (max-width:999px) {
+    body{
+        font-size: 80%;
+    }
+    h1, h2, h3, h4, h5, h6, p {
+        font-size: 99%;
+    }
+} */
+
+
+    /*start header style*/
+.navbar-nav.nav-link{
     color: black;
 }
 
@@ -252,5 +274,59 @@ footer{
     background: white !important;
     opacity: 0.7;
 }
-/* start abilities page */
+.abilities_boxshadow_right{
+    box-shadow: 4px 4px 15px 1px #ffba3ac7;
+}
+.abilities_boxshadow_left{
+    box-shadow: -4px 4px 15px 1px #ffba3ac7;
+}
+.line::after{
+    content: '';
+    background-color: var(--yellow-color);
+    position: absolute;
+    width: 0.4rem;
+    height: 39rem;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+.circle_of_line_right{
+    position: absolute;
+    background-color: var(--yellow-color);
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    left: -1.65rem;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+.circle_of_line_left{
+    position: absolute;
+    background-color: var(--yellow-color);
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    right: -1.65rem;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+/* finish abilities page */
 

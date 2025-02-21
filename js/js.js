@@ -9,7 +9,7 @@ let btnGit = document.getElementById('btnGit');
 function showCode(project) {
     let codes = {
         "project1" : `123`,
-        "project2" : [`    import os 
+        "project2" : [`       import os 
                 from datetime import datetime
                 def creat_datefile(file_path):
                     year = datetime.now().year
