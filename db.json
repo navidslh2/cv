@@ -1,0 +1,29 @@
+{
+    "slide":[
+        {
+            "id":1,
+            "image":"./img/html&css.jpg",
+            "alt":"html&css"
+        },
+        {
+            "id":2,
+            "image":"./img/js.png",
+            "alt":"js"
+        },
+        {
+            "id":3,
+            "image":"./img/python.png",
+            "alt":"python"
+        },
+        {
+            "id":4,
+            "image":"./img/photoshop (1).jpg",
+            "alt":"photoshop"
+        },
+        {
+            "id":5,
+            "image":"./img/git.png",
+            "alt":"git"
+        }
+    ]
+}
