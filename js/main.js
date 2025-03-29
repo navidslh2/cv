@@ -1,4 +1,10 @@
-import Slider from "./Slider.js";
+import slide from "./abilities.js";
+import "./bootstarp.js"
+import "./fontawesome/all.js"
 
 
-Slider()
+slide()
+
+
+
+

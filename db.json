@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
     "slider":[
+=======
+    "slide":[
+>>>>>>> temporary
         {
             "id":1,
             "image":"./img/html&css.jpg",
@@ -19,6 +23,14 @@
             "id":4,
             "image":"./img/photoshop (1).jpg",
             "alt":"photoshop"
+<<<<<<< HEAD
+=======
+        },
+        {
+            "id":5,
+            "image":"./img/git.png",
+            "alt":"git"
+>>>>>>> temporary
         }
     ]
 }
