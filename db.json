@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-    "slider":[
-=======
     "slide":[
->>>>>>> temporary
         {
             "id":1,
             "image":"./img/html&css.jpg",
@@ -23,14 +19,197 @@
             "id":4,
             "image":"./img/photoshop (1).jpg",
             "alt":"photoshop"
-<<<<<<< HEAD
-=======
         },
         {
             "id":5,
             "image":"./img/git.png",
             "alt":"git"
->>>>>>> temporary
+
+        }
+    ],
+    "project":[
+        {
+            "id":1,
+            "code":[
+"import pandas as pd",
+
+"         def vlookup(main,lookup,lookup_value,how='outer'):",
+"             return main.merge(lookup,on=lookup_value,how=how)",
+
+"         #add_product_info",
+"         product_info = 'product_info.xls'",
+"         main_file = pd.read_excel(product_info,engine='xlrd',usecols=['نام کالا','بارکد1'])",
+"         main_file = main_file.rename(columns={'بارکد1':'بارکد'})",
+
+"         #add_yousefabad_branch_file",
+"         path_yousefabad_tajmi2 = 'yousefabad/tajmi2.xls'",
+"         path_yousefabad_kasri = 'yousefabad/kasri.xlsx'",
+"         path_yousefabad_zayeat = 'yousefabad/zayeat.xlsx'",
+"         path_yousefabad_varite = 'yousefabad/varite.xlsx'",
+"         path_yousefabad_info = 'product_info.xls'",
+
+"         yousefabad_tajmi2 = pd.read_excel(path_yousefabad_tajmi2,engine='xlrd',usecols=['بارکد','نام کالا','ابتدای دوره - تعداد ','ابتدای دوره - ریال','خرید طی دوره (دریافتی) - تعداد','خرید طی دوره (دریافتی) - ریال','انتقالات ورودی - تعداد','انتقالات ورودی - ریال','فروش - تعداد','فروش - ریال','برگشت از فروش - تعداد','برگشت از فروش - ریال','انتهای دوره - تعداد','انتهای دوره - ریال','قیمت تمام شده کالای فروش رفته - ریال'])",
+"         yousefabad_kasri = pd.read_excel(path_yousefabad_kasri,engine='openpyxl',usecols=['بارکد','ارزش ریالی خرید','تعداد'])",
+"         yousefabad_zayeat = pd.read_excel(path_yousefabad_zayeat,engine='openpyxl')",
+"         yousefabad_varite = pd.read_excel(path_yousefabad_varite,engine='openpyxl')",
+
+"         info = pd.read_excel(path_yousefabad_info,engine='xlrd',usecols=['نام کالا','بارکد1','بارکد کالای واریته1','بارکد کالای واریته2','بارکد کالای واریته3'])",
+"         info = info.rename(columns={'بارکد1':'بارکد','بارکد کالای واریته1':'بارکد واریته'})",
+"         #rename_columns_of_kasri",
+"         yousefabad_kasri = yousefabad_kasri.rename(columns={'تعداد':'کسری کیلو','ارزش ریالی خرید':'کسری ریال'})",
+"         #creat_usefull_columns_for_tajmi2",
+"         yousefabad_tajmi2['خرید-کیلو'] = yousefabad_tajmi2['خرید طی دوره (دریافتی) - تعداد'] + yousefabad_tajmi2['انتقالات ورودی - تعداد']",
+"         yousefabad_tajmi2['خرید-ریال'] = yousefabad_tajmi2['خرید طی دوره (دریافتی) - ریال'] + yousefabad_tajmi2['انتقالات ورودی - ریال']",
+"         yousefabad_tajmi2['کل فروش-تعداد'] = yousefabad_tajmi2['فروش - تعداد'] - yousefabad_tajmi2['برگشت از فروش - تعداد']",
+"         yousefabad_tajmi2['کل فروش-ریال'] = yousefabad_tajmi2['فروش - ریال'] - yousefabad_tajmi2['برگشت از فروش - ریال']",
+"         yousefabad_tajmi2['نرخ خرید'] = yousefabad_tajmi2['خرید-ریال'] / yousefabad_tajmi2['خرید-کیلو'].replace(0,None)",
+"         #creat_usefull_columns_for_zayeat",
+"         columns_zayeat = [3,23,27]",
+"         yousefabad_zayeat = yousefabad_zayeat.iloc[:, columns_zayeat]",
+"         yousefabad_zayeat.columns.values[0] ='ضایعات کیلو'",
+"         yousefabad_zayeat.columns.values[1] ='ضایعات ریال'",
+"         yousefabad_zayeat.columns.values[2] ='بارکد'",
+"         #creat_usefull_columns_for_varite",
+"         columns_varite = [2,3,6,12]",
+"         yousefabad_varite = yousefabad_varite.iloc[:, columns_varite]",
+"         yousefabad_varite.columns.values[0] ='برگشت از فروش واریته'",
+"         yousefabad_varite.columns.values[1] = 'فروش واریته'",
+"         yousefabad_varite.columns.values[2] ='فروش واریته ریال'",
+"         yousefabad_varite.columns.values[3] ='بارکد واریته'",
+"         yousefabad_varite['فروش واریته کیلو'] = yousefabad_varite['فروش واریته'] - yousefabad_varite['برگشت از فروش واریته']",
+
+"         #creat_varite_barcode",
+"         yousefabad_varite = vlookup(yousefabad_varite,info,'بارکد واریته')",
+"         yousefabad_varite['فروش واریته ریال'] = yousefabad_varite['فروش واریته ریال'].fillna(0)",
+"         yousefabad_varite = yousefabad_varite[yousefabad_varite['فروش واریته ریال'] !=0]",
+
+
+"         info = info.drop(columns=['بارکد واریته'])",
+"         info = info.rename(columns={'بارکد کالای واریته2':'بارکد واریته'})",
+
+"         info['بارکد واریته'] = info['بارکد واریته'].fillna(0)",
+"         info = info[info['بارکد واریته'] !=0]",
+
+"         mapped_values = info.set_index('بارکد واریته')['بارکد'] ",
+"         yousefabad_varite['بارکد'] = yousefabad_varite['بارکد'].fillna(yousefabad_varite['بارکد واریته'].map(mapped_values))",
+
+"         info = info.drop(columns=['بارکد واریته'])",
+"         info = info.rename(columns={'بارکد کالای واریته3':'بارکد واریته'})",
+"         info['بارکد واریته'] = info['بارکد واریته'].fillna(0)",
+"         info = info[info['بارکد واریته'] !=0]",
+"         mapped_values = info.set_index('بارکد واریته')['بارکد'] ",
+"         yousefabad_varite['بارکد'] = yousefabad_varite['بارکد'].fillna(yousefabad_varite['بارکد واریته'].map(mapped_values))",
+"         yousefabad_varite= yousefabad_varite.groupby('بارکد').sum().reset_index()",
+
+"         #remove_extra_rows",
+"         yousefabad_tajmi2=yousefabad_tajmi2.drop(columns=['خرید طی دوره (دریافتی) - تعداد','خرید طی دوره (دریافتی) - ریال','انتقالات ورودی - تعداد','انتقالات ورودی - ریال','فروش - تعداد','فروش - ریال','برگشت از فروش - تعداد','برگشت از فروش - ریال'])",
+"         yousefabad_varite=yousefabad_varite.drop(columns=['برگشت از فروش واریته','فروش واریته','بارکد واریته','نام کالا','بارکد کالای واریته2','بارکد کالای واریته3'])",
+
+"         #start_vlookup",
+"         main_file = vlookup(main_file,yousefabad_tajmi2,'بارکد')",
+"         main_file = vlookup(main_file,yousefabad_varite,'بارکد')",
+"         main_file = vlookup(main_file,yousefabad_kasri,'بارکد')",
+"         main_file = vlookup(main_file,yousefabad_zayeat,'بارکد')",
+
+"         #sorting",
+
+"         main_file['خالص خرید کیلو'] = main_file['خرید-کیلو'] - main_file['ضایعات کیلو']",
+"         main_file['نرخ خالص خرید'] = main_file['خرید-ریال'] / main_file['خالص خرید کیلو']",
+"         main_file['فروش اصلی کیلو'] = main_file['کل فروش-تعداد'] - main_file['فروش واریته کیلو']",
+"         main_file['فروش اصلی ریال'] = main_file['کل فروش-ریال'] - main_file['فروش واریته ریال']",
+"         main_file['نرخ فروش'] = main_file['کل فروش-ریال'] / main_file['کل فروش-تعداد']",
+"         main_file['سود و زیان'] = main_file['کل فروش-ریال'] - main_file['قیمت تمام شده کالای فروش رفته - ریال']",
+"         main_file['حاشیه سود'] = main_file['سود و زیان'] / main_file['کل فروش-ریال']",
+
+"         columns =list(main_file.columns)",
+"         columns.insert(5, columns.pop(columns.index('خرید-کیلو')))",
+"         columns.insert(5, columns.pop(columns.index('خرید-ریال')))",
+"         columns.insert(7, columns.pop(columns.index('نرخ خرید')))",
+"         columns.insert(8, columns.pop(columns.index('ضایعات کیلو')))",
+"         columns.insert(9, columns.pop(columns.index('ضایعات ریال')))",
+"         columns.insert(10, columns.pop(columns.index('خالص خرید کیلو')))",
+"         columns.insert(11, columns.pop(columns.index('نرخ خالص خرید')))",
+"         columns.insert(12, columns.pop(columns.index('فروش اصلی کیلو')))",
+"         columns.insert(13, columns.pop(columns.index('فروش اصلی ریال')))",
+"         columns.insert(14, columns.pop(columns.index('فروش واریته کیلو')))",
+"         columns.insert(15, columns.pop(columns.index('فروش واریته ریال')))",
+"         columns.insert(16, columns.pop(columns.index('کل فروش-تعداد')))",
+"         columns.insert(17, columns.pop(columns.index('کل فروش-ریال')))",
+"         columns.insert(18, columns.pop(columns.index('نرخ فروش')))",
+"         columns.insert(19, columns.pop(columns.index('کسری کیلو')))",
+"         columns.insert(20, columns.pop(columns.index('کسری ریال')))",
+"         columns.insert(25, columns.pop(columns.index('حاشیه سود')))",
+
+"         main_file = main_file[columns]",
+
+
+"         main_file[\"sum\"]=main_file.iloc[:,3:].sum(axis=1)",
+"         main_file=main_file[main_file[\"sum\"] !=0]",
+"         main_file=main_file.drop(columns=[\"sum\"])",
+"         output = 'gozareshtafkikekala.xls'",
+"         main_file.to_csv(output, index=True, encoding='utf-8-sig')"
+            ],
+            "gitLink":"https://github.com/navidslh2/report-tafkike-kala"
+        },
+        {
+            "id":2,
+            "code":[
+                    "import os",  
+                    "         from datetime import datetime",
+                    "         def creat_datefile(file_path):",
+                    "             year = datetime.now().year",
+                    "             month = datetime.now().month",
+                    "             day = datetime.now().day",
+                    "             hour = datetime.now().hour",
+                    "             creat_file = os.path.join(file_path, str(year), str(month), str(day), str(hour))",
+                    "             if not os.path.exists(creat_file):",
+                    "                 os.makedirs(creat_file)",
+                    "             return creat_file",
+
+                    "         def log_event(creat_file, message):",
+                    "             log_file_path = os.path.join(creat_file,'log.txt')",
+                    "             with open(log_file_path, 'a') as log_file:",
+                    "                 log_file.write(f'{datetime.now()}:{message}\n')",
+
+                    "         file_path = os.getcwd()",
+                    "         log_directory = creat_datefile(file_path)",
+                    "         log_event(log_directory, 'Hello')"
+            ],
+            "gitLink":"https://github.com/navidslh2/save-change"
+        },
+        {
+            "id":3,
+            "code":[
+                    "const time=document.querySelector(\".time\")",
+                    "         const hour=document.querySelectorAll(\".controler>select\")[0]",
+                    "         const minutes=document.querySelectorAll(\".controler>select\")[1]",
+                    "         const button=document.querySelector(\"button\")",
+                    "         const ringTone=new Audio(\"./audio/ringtone.mp3\")",
+                    "         let alarm=null",
+                    "         setInterval(()=>{",
+                    "             let date=new Date()",
+                    "             time.innerHTML=`${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`",
+                    "             if(alarm==`${date.getHours()}:${date.getMinutes()}`){",
+                    "                 ringTone.play()",
+                    "             }",
+                    "         },100)",
+
+                    "         for(let i=1;i<25;i++){",
+                    "             hour.innerHTML+=`<option value=\\\"${i}\\\">${i}</option>`",
+                    "         }",
+
+                    "         for(let i=1;i<61;i++){",
+                    "             minutes.innerHTML+=`<option value=\\\"${i}\\\">${i}</option>`",
+                    "         }",
+
+                    "         button.addEventListener(\"click\",()=>{",
+                    "             alarm=`${hour.value}:${minutes.value}`",
+                    "             if(alarm.includes(\"hour\") || alarm.includes(\"hour\") ){",
+                    "                 return alert(\"select valid time\")",
+                    "             }",
+                    "         })"
+            ],
+            "gitLink":"https://github.com/navidslh2/Alarm-clock"
         }
     ]
 }

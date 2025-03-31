@@ -14,7 +14,7 @@ let slide=async()=>{
             slidesPerGroup: 1, 
             loopAdditionalSlides: 2,
             autoplay: {
-                delay: 300000000, 
+                delay: 2000, 
                 disableOnInteraction: false,
             },
             navigation: {

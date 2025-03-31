@@ -32,6 +32,9 @@ a {
     color: black;
     /* color: white; */
 }
+p{
+    text-align: justify;
+}
 .bg_yellow {
     background-color: var(--yellow-color);
 }
@@ -171,13 +174,22 @@ footer{
 .main_container{
     margin-top: 7rem;
 }
+.my_project{
+    position: relative
+    ;
+}
 .my_project::before{
     content: '';
-    width: 0.2rem;
-    height: 3rem;
+    width: 4px;
+    height: 45px;
     background-color: var(--yellow-color);
     position: absolute;
-    right: 18.5rem;
+    right: -7px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 .fix_header{
     position:fixed;
