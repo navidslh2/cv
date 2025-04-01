@@ -136,23 +136,147 @@ p{
 }
 /* finish header style*/
 /* start main style */
-.hexagon_container{
-    margin-top: 7rem;
-    gap: 1rem;
+.card{
+    width: 280px;
+    height: 280px;
+    position: relative;
+    border: none;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    transform: translateY(40px);
+    animation: fadeInUp 0.8s ease-in-out forwards;
+    -webkit-animation: fadeInUp 0.8s ease-in-out forwards;
+    -webkit-transform: translateY(40px);
+    -moz-transform: translateY(40px);
+    -ms-transform: translateY(40px);
+    -o-transform: translateY(40px);
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
 }
-.hexagon {
-    width: 13rem;
-    height: 15rem;
-    clip-path: polygon(50% 0%,100% 25%, 100% 75%, 50% 100%,0% 75%,0% 25%);
-    background: linear-gradient(#21304b,#389fff);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 1.6rem;
-    
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+        -webkit-transform: translateY(40px);
+        -moz-transform: translateY(40px);
+        -ms-transform: translateY(40px);
+        -o-transform: translateY(40px);
+}
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card::after{
+    content:"";
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translate(50%);
+    -webkit-transform: translate(50%);
+    -moz-transform: translate(50%);
+    -ms-transform: translate(50%);
+    -o-transform: translate(50%);
+    width: 170px;
+    height: 120px;
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 20px rgba(61, 61, 61, 0.781);
+    z-index: 0;
+}
+.img_card{
+    width: 170px;
+    height: 120px;
+    margin: auto;
+    z-index: 2;
+    position: absolute;
+    right: 50%;
+    transform: translate(50%);
+    -webkit-transform: translate(50%);
+    -moz-transform: translate(50%);
+    -ms-transform: translate(50%);
+    -o-transform: translate(50%);   
+}
+.card img{
+    width: 170px;
+    height: 120px;
+    object-fit: cover;
+    display: block;
+}
+.discription{
+    width: 100%;
+    height: 200px;
+    z-index: 1;  
+    margin-top: 60px;
+    padding: 65px 7px 5px 7px;
+    box-shadow: 10px 10px 30px rgba(61, 61, 61, 0.781);
+    overflow: hidden;
+    position: relative;
+    background: radial-gradient(circle, var(--yellow-color), #ffe08d);
+}    
+.card p{
+    margin-top: 5px;
+    opacity: 0.7;   
+}
+.card:hover::after{
+    box-shadow: none;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+.card:hover .img_card {
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+.card:hover .discription{
+    padding-top: 0;
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    box-shadow: 10px 10px 60px rgba(61, 61, 61, 0.623);
+}
+   
+.card:hover .git{
+    background: radial-gradient(#ffba3a65, #ffe18d69),
+    url('../img/git.png');
+    background-size: cover;
+    background-position: center;
     
 }
+.card:hover .project{
+    background: radial-gradient(#ffba3a65, #ffe18d69),
+    url('../img/project.jpg');
+    background-size: cover;
+    background-position: center;
+    
+}
+.card:hover .abilities{
+    background: radial-gradient(#ffba3a65, #ffe18d69),
+    url('../img/abilities.jpg');
+    background-size: cover;
+    background-position: center;
+    
+}
+.card:hover .rezume{
+    background: radial-gradient(#ffba3a65, #ffe18d69),
+    url('../img/rezume.jpeg');
+    background-size: cover;
+    background-position: center;
+    
+}
+
+
 /* finish main style */
 /* start footer style*/
 footer{
@@ -354,3 +478,10 @@ footer{
 }
 /* finish abilities page */
 
+/* اضافه */
+@media (max-width: 1200px) {
+    .container-xl {
+        max-width: 100% !important;
+        padding: 0 15px;
+    }
+}
