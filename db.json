@@ -211,5 +211,43 @@
             ],
             "gitLink":"https://github.com/navidslh2/Alarm-clock"
         }
+    ],
+    "card":[
+        {
+            "id":1,
+            "img":"./img/git-link.png",
+            "title":"لی گیت",
+            "discription":"از این قسمت میتوانید کد های مزبوط به این سایت را مشاهده کنید",
+            "className":"git",
+            "link":"https://github.com/navidslh2/cv",
+            "alt":"git"
+        },
+        {
+            "id":2,
+            "img":"./img/project.jpg",
+            "title":"پروژه ها",
+            "discription":"از این قسمت میتوانید پروژه های انجام شده توسط این جانب را مشاهده کنید",
+            "className":"project",
+            "link":"./project.html",
+            "alt":"project"
+        },
+        {
+            "id":3,
+            "img":"./img/abilities.jpg",
+            "title":"توانایی ها",
+            "discription":"از قسمت میتوانید زیان های برنامه نویسی که به انها مسلط هستم را مشاهده کنید",
+            "className":"abilities",
+            "link":"./abilities.html",
+            "alt":"abilities"
+        },
+        {
+            "id":4,
+            "img":"./img/rezume.jpeg",
+            "title":"دانلود رزومه",
+            "discription":"از این قسمت میتوانید رزومه اینجانب را دانلود کنید ",
+            "className":"rezume",
+            "link":"",
+            "alt":"rezume"
+        }
     ]
 }

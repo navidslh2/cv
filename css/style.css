@@ -215,7 +215,7 @@ p{
     overflow: hidden;
     position: relative;
     background: radial-gradient(circle, var(--yellow-color), #ffe08d);
-    opacity: 0;
+    opacity: 1;
     transform: translateX(-100%);
     -webkit-transform: translateX(-100%);
     -moz-transform: translateX(-100%);
@@ -255,7 +255,7 @@ p{
    
 .card:hover .git{
     background: radial-gradient(#ffba3a65, #ffe18d69),
-    url('../img/git.png');
+    url('../img/git-link.png');
     background-size: cover;
     background-position: center;
     
