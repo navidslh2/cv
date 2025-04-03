@@ -216,7 +216,7 @@
         {
             "id":1,
             "img":"./img/git-link.png",
-            "title":"لی گیت",
+            "title":"لینک گیت",
             "discription":"از این قسمت میتوانید کد های مزبوط به این سایت را مشاهده کنید",
             "className":"git",
             "link":"https://github.com/navidslh2/cv",
@@ -246,7 +246,7 @@
             "title":"دانلود رزومه",
             "discription":"از این قسمت میتوانید رزومه اینجانب را دانلود کنید ",
             "className":"rezume",
-            "link":"",
+            "link":"./download/NavidSalehi.pdf",
             "alt":"rezume"
         }
     ]
