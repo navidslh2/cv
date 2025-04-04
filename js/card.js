@@ -4,7 +4,23 @@ let getCardData=async()=>{
         let data=await fetch("http://localhost:3000/card")
         let res=await data.json()
         let creatCard=res.map(elem=>{
-            return`
+            if(elem.id===4){
+                return`
+            <div class="col-12 col-sm-6 col-xl-3 d-flex justify-content-center align-items-center">
+                <div class="card mt-5">
+                    <a href="${elem.link}" download target="_blank">
+                        <div class="img_card rounded-3">
+                            <img src="${elem.img}" alt="${elem.alt}" class="rounded-3">
+                        </div>
+                        <div class="discription ${elem.className} d-flex flex-column rounded-3">
+                            <h2 class="mx-auto">${elem.title}</h2>
+                            <p class="px-3">${elem.discription}</p>
+                        </div>  
+                    </a>
+                </div>
+            </div>`
+            }else{
+                return`
             <div class="col-12 col-sm-6 col-xl-3 d-flex justify-content-center align-items-center">
                 <div class="card mt-5">
                     <a href="${elem.link}" target="_blank">
@@ -18,6 +34,10 @@ let getCardData=async()=>{
                     </a>
                 </div>
             </div>`
+            }
+
+
+            
         
         })
         jsGuide.innerHTML=creatCard.join("")

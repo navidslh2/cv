@@ -2,6 +2,8 @@ import slide from "./abilities.js";
 import "./bootstarp.js"
 import { card, getCardData } from "./card.js";
 import "./fontawesome/all.js"
+import { bigHeader, smallHeader } from "./header.js";
+
 import nameAnimation from "./nameAnimation.js";
 import { copyCode, showCode } from "./project.js";
 
@@ -12,4 +14,8 @@ window.copyCode=copyCode
 getCardData()
 card()
 nameAnimation()
+bigHeader()
+smallHeader()
+
+
 

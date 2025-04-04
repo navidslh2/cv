@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- header for bigger than lg -->
+    <div class="menu d-none d-lg-block">
+        <nav class="container-fluid container-xl">
+            <ul class="d-flex align-items-center justify-content-start gap-4 ps-5">
+                <li><a class="hover_blue" href="./index.html">خانه</a></li>
+                <li ><a class="hover_blue" href="./abilities.html" target="_blank">توانایی ها</a></li>
+                <li class="hover_blue">پروژه ها
+                    <i class="fa-solid fa-angle-down ps-1"></i>
+                    <div class="drupdown">
+                        <ul class="d-flex flex-column gap-2">
+                            <li class="drupdown_hover"><a class="hover_blue" href="./project.html" target="_blank">پایتون</a></li>
+                            <li class="drupdown_hover"><a class="hover_blue" href="./project.html" target="_blank">جاوا اسکریپت</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- header for smaller than lg -->
+    <div class="menu_small d-lg-none">
+        <nav class="w-100">
+            <ul class="d-flex flex-column justify-content-center align-items-center gap-4 pt-5">
+                <li class="ps-2"><a class="hover_blue" href="./index.html">خانه</a></li>
+                <li class="ps-2"><a class="hover_blue" href="./abilities.html" target="_blank">توانایی ها</a></li>
+                <li class="hover_blue ps-2">پروژه ها
+                    <i class="fa-solid fa-angle-down ps-1"></i>
+                    <div class="drupdown_small">
+                        <ul class="d-flex flex-column gap-4">
+                            <li class="drupdown_hover"><a class="hover_blue" href="./project.html" target="_blank">پایتون</a></li>
+                            <li class="drupdown_hover"><a class="hover_blue" href="./project.html" target="_blank">جاوا اسکریپت</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>
