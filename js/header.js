@@ -20,39 +20,64 @@ let bigHeader=()=>{
 let smallHeader=()=>{
     let li=document.querySelectorAll(".menu_small>nav>ul>li")
     li.forEach(elem=>{
-        
+
         elem.addEventListener("click",(element)=>{
             element.stopPropagation()
             let drupdown=elem.querySelector(".drupdown_small")
             let icon=elem.querySelector("svg")
             if(drupdown!==null){
                 drupdown.classList.add("active_drupdown_small")
-                console.log(elem.innerHTML);
                 if(icon){
-                    icon.classList.toggle("rotate-down");
-                    icon.classList.toggle("rotate-up");
+                    icon.classList.remove("rotate-left");
+                    icon.classList.add("rotate-up")
+                    
                 }
                 
             }
         })
         
     })
-    // document.addEventListener("click", (e) => {
-    //     let dropdown = document.querySelector(".drupdown_small");
-    //     if (dropdown) {
-    //         dropdown.classList.remove("active_drupdown_small");
-    //     }
-
-    // })
-    document.addEventListener("click",(elem)=>{
-        let drupdown=document.querySelector(".drupdown_small")
-        let icon=document.querySelector(".menu_small svg")
-        drupdown.classList.remove("active_drupdown_small")
-        icon.classList.remove("rotate-up");
-        icon.classList.add("rotate-down");
-        
-        
+       
+    document.addEventListener("click", (elem) => {
+        let dropdown = document.querySelector(".drupdown_small");
+        if (elem.target.closest(".menu_small")) {
+            dropdown.classList.remove("active_drupdown_small");
+            let icon = document.querySelector(".menu_small svg.rotate-up");
+            if (icon) {
+                icon.classList.remove("rotate-up");
+                icon.classList.add("rotate-left");
+            }
+        }
+    });  
+}
+let openMenu=()=>{
+    
+    let menu=document.querySelector(".menu_small")
+    let showMenu=(elem)=>{
+        let bars=document.querySelector(".bars")
+        elem.stopPropagation()
+        bars.remove()    
+        menu.classList.add("active_menu_small")
+    }
+    let bars=document.querySelector(".bars")
+    if(bars){
+        bars.addEventListener("click",showMenu)
+    }
+    document.addEventListener("click", (elem)=>{
+        if(!elem.target.closest(".menu_small")) {
+            menu.classList.remove("active_menu_small")
+            let checkBars=document.querySelector(".bars")
+            if(!checkBars){
+                let newBars=document.createElement("button")
+                newBars.className="bars border-0 pt-3 ps-4 bg-white"
+                newBars.innerHTML=`<i class="fa-solid fa-bars icon_bars d-lg-none"></i>`
+                menu.parentNode.insertBefore(newBars,menu)
+                newBars.addEventListener("click",showMenu)
+            }
+        }    
     })
 }
 
-export {bigHeader, smallHeader}
+
+export {bigHeader, smallHeader, openMenu}
+
