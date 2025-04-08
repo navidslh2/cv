@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,25 +10,49 @@
 <body>
     <header>
       <!-- start header-->
-      <nav class="navbar navbar-expand-xl">
-        <div class="container-fluid container-xl">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+      <!--start header for bigger than lg -->
+      <div class="menu d-none d-lg-block">
+        <nav class="container-fluid container-xl">
+            <ul class="d-flex align-items-center justify-content-start gap-4 ps-5">
+                <li><a class="hover_blue" href="./index.html">خانه</a></li>
+                <li ><a class="hover_blue" href="./abilities.html" target="_blank">توانایی ها</a></li>
+                <li class="hover_blue">پروژه ها
+                    <i class="fa-solid fa-angle-down ps-1"></i>
+                    <div class="drupdown">
+                        <ul class="d-flex flex-column gap-2">
+                            <li class="drupdown_hover"><a class="hover_blue" href="./project.html" target="_blank">پایتون</a></li>
+                            <li class="drupdown_hover"><a class="hover_blue" href="./project.html" target="_blank">جاوا اسکریپت</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+      </div>
+      <!--finish header for bigger than lg -->
+      <!--start header for smaller than lg -->
+      <div class="d-lg-none bg-white">
+          <button class="bars w-100  border-0 d-flex align-items-center justify-content-start bg-white">
+              <i class="fa-solid fa-bars icon_bars"></i>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link mx-1 hover_blue border_hover" href="./index.html">خانه</a>
-              <a class="nav-link mx-1 hover_blue border_hover" href="./abilities.html" target="_blank">توانایی ها</a>
-              <a class="nav-link mx-1 hover_blue border_hover" href="./project.html" target="_blank">پروژه ها</a>  
-            </div>
+          <div class="menu_small bg-white">  
+              <nav class="w-100">
+                  <ul class="d-flex flex-column justify-content-center align-items-center gap-4 pt-5">
+                      <li class="ps-2"><a class="hover_blue" href="./index.html">خانه</a></li>
+                      <li class="ps-2"><a class="hover_blue" href="./abilities.html" target="_blank">توانایی ها</a></li>
+                      <li class="hover_blue ps-2">پروژه ها
+                          <i class="fa-solid fa-angle-left ps-1 icon"></i>
+                          <div class="drupdown_small">
+                              <ul class="d-flex flex-column gap-4">
+                                  <li class="drupdown_hover"><a class="hover_blue" href="./project.html" target="_blank">پایتون</a></li>
+                                  <li class="drupdown_hover"><a class="hover_blue" href="./project.html" target="_blank">جاوا اسکریپت</a></li>
+                              </ul>
+                          </div>
+                      </li>
+                  </ul>
+              </nav>
           </div>
-          <!-- <div>
-            <button class="bg-transparent border-1 rounded-2 p-2 me-3">
-                <a class="text-dark" href="#">درخواست همکاری</a>
-            </button>
-          </div> -->
-        </div>
-      </nav>
+      </div>
+      <!--finish header for smaller than lg -->
       <!--finish header-->
       <!--start intrduce-->    
       <div class="container-fluid">
@@ -71,7 +95,7 @@
     <!--finish card-->
     <footer>
       <div class="container-fluid container-xl">
-          <!--for bigger than lg size-->
+        <!--start footer for bigger than lg size-->
         <div class="d-none d-lg-flex justify-content-between align-items-start py-lg-5 ">
           <!--start right side of footer-->
           <div class="d-flex flex-column" style="width: 40%;">
@@ -89,15 +113,15 @@
           <!--start middle side of footer-->
           <div class="d-flex flex-column gap-2 mb-2 mt-2">
               <h4>مهارت‌ها و پروژه‌ها</h4>
-              <a href="https://github.com/navidslh2/cv" class="d-flex align-items-center justify-content-start gap-3 pt-3 text-white">
+              <a href="https://github.com/navidslh2/cv" target="_blank" class="d-flex align-items-center justify-content-start gap-3 pt-3 text-white">
                   <i class="fa-brands fa-github"></i>
                   <p class="my-auto">لینک گیت</p>
               </a>
-              <a href="./project.html" class="d-flex align-items-center justify-content-start gap-3 text-white">
+              <a href="./project.html" target="_blank" class="d-flex align-items-center justify-content-start gap-3 text-white">
                   <i class="fa-solid fa-pen-nib"></i>
                   <p class="my-auto">پروژه ها</p>
               </a>
-              <a href="./abilities.html" class="d-flex align-items-center justify-content-start gap-3 text-white">
+              <a href="./abilities.html" target="_blank" class="d-flex align-items-center justify-content-start gap-3 text-white">
                   <i class="fas fa-bolt"></i>
                   <p class="my-auto">توانایی ها</p>
               </a>
@@ -117,14 +141,11 @@
               <a class="text-white" href="https://instagram.com/navidslh" target="_blank">
                 <i class="fa-brands fa-instagram"></i>
               </a>
-              <a class="text-white" href="">
+              <a class="text-white pb-1" href="https://www.linkedin.com/in/navid-salehi-3b4a57341/" target="_blank">
                   <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="17" height="17" viewBox="0,0,256,256" style="fill:#FFFFFF;">
                   <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M19,3h-14c-1.105,0 -2,0.895 -2,2v14c0,1.105 0.895,2 2,2h14c1.105,0 2,-0.895 2,-2v-14c0,-1.105 -0.895,-2 -2,-2zM7.738,17v0c-0.697,0 -1.262,-0.565 -1.262,-1.262v-4.477c0.001,-0.696 0.566,-1.261 1.262,-1.261v0c0.697,0 1.262,0.565 1.262,1.262v4.477c0,0.696 -0.565,1.261 -1.262,1.261zM7.694,8.717c-0.771,0 -1.286,-0.514 -1.286,-1.2c0,-0.686 0.514,-1.2 1.371,-1.2c0.771,0 1.286,0.514 1.286,1.2c0,0.686 -0.514,1.2 -1.371,1.2zM16.779,17v0c-0.674,0 -1.221,-0.547 -1.221,-1.221v-2.605c0,-1.058 -0.651,-1.174 -0.895,-1.174c-0.244,0 -1.058,0.035 -1.058,1.174v2.605c0,0.674 -0.547,1.221 -1.221,1.221h-0.081c-0.674,0 -1.221,-0.547 -1.221,-1.221v-4.517c0,-0.697 0.565,-1.262 1.262,-1.262v0c0.697,0 1.262,0.565 1.262,1.262c0,0 0.282,-1.262 2.198,-1.262c1.219,0 2.196,0.977 2.196,3.174v2.605c0,0.674 -0.547,1.221 -1.221,1.221z"></path></g></g>
                   </svg>
-              </a>
-              
-              
-              
+              </a> 
             </div>
             <div class="d-flex align-items-center gap-3">
               <i class="fa-solid fa-phone"></i>
@@ -134,79 +155,78 @@
               <i class="fa-solid fa-envelope"></i>
               <p class="my-auto">navidslh2@gmail.com</p>
             </div>
-
-
-            
           </div>
           <!--finish end side of footer-->
         </div>
-          <!--for smaller than lg size-->
-          <div class="d-flex d-lg-none flex-column justify-content-between align-items-center py-4 ">
-              <!--start top side of footer-->
-              <div class="d-flex flex-column align-items-center justify-content-center" style="width: 80%;">
-                <div class="d-flex align-items-center justify-content-start gap-3 m-2">
-                  <div class="profile_cotainer">
-                    <img class="profile_img" src="./img/profile.jpg" alt="profile-img">
-                  </div>
-                  <h4>نوید صالحی هستم</h4>
+        <!--finish footer for bigger than lg size-->
+        <!--start footer for smaller than lg size-->
+        <div class="d-flex d-lg-none flex-column justify-content-between align-items-center py-4 ">
+            <!--start top side of footer-->
+            <div class="d-flex flex-column align-items-center justify-content-center" style="width: 80%;">
+              <div class="d-flex align-items-center justify-content-start gap-3 m-2">
+                <div class="profile_cotainer">
+                  <img class="profile_img" src="./img/profile.jpg" alt="profile-img">
                 </div>
-                <div class="mt-2">
-                  <p class="lh-lg">من نوید صالحی هستم، بعد از چندین سال کار در حوزه حسابداری، تصمیم گرفتم مسیر جدیدی را در برنامه‌نویسی آغاز کنم. حدود یک سال است که در مسیر یادگیری برنامه‌نویسی قدم گذاشته‌ام و هدفم ورود به بازار کار به‌عنوان یک برنامه‌نویس وب است.به یادگیری و توسعه‌ی مهارت‌های جدید علاقه دارم و مشتاقم که در این مسیر پیشرفت کنم.</p>
-                </div>   
-              </div> 
-              <!--finish top side of footer-->
-              <!--start middle side of footer-->
-              <div class="d-flex flex-column gap-2 mb-2 mt-4">
-                  <h4>مهارت‌ها و پروژه‌ها</h4>
-                  <div class="d-flex flex-column gap-2 ps-2">
-                      <a href="" class="d-flex align-items-center justify-content-start gap-3 pt-2 text-white">
-                          <i class="fa-brands fa-github"></i>
-                          <p class="my-auto">لینک گیت</p>
-                      </a>
-                      <a href="" class="d-flex align-items-center justify-content-start gap-3 text-white">
-                          <i class="fa-solid fa-pen-nib"></i>
-                          <p class="my-auto">پروژه ها</p>
-                      </a>
-                      <a href="" class="d-flex align-items-center justify-content-start gap-3 text-white">
-                          <i class="fas fa-bolt"></i>
-                          <p class="my-auto">توانایی ها</p>
-                      </a>
-                      <a href="./download/NavidSalehi.pdf" download class="d-flex align-items-center justify-content-start gap-3 text-white">
-                          <i class="fa-solid fa-download"></i>
-                          <p class="my-auto">دانلود رزومه</p>
-                      </a>
-                  </div>
+                <h4>نوید صالحی هستم</h4>
               </div>
-              <!--finish middle side of footer-->
-              <!--start buttom side of footer-->
-              <div class="d-flex flex-column gap-2 mt-5 mb-3">
-                <h4>راه های ارتباطی با من</h4>
-                <div class="d-flex flex-column gap-2 ps-3">
-                  <div class="d-flex align-items-center gap-2 pt-1">
-                      <a class="text-white" href="https://t.me/navidslh" target="_blank">
-                      <i class="fa-brands fa-telegram" ></i>
-                      </a>
-                      <a class="text-white" href="https://instagram.com/navidslh" target="_blank">
-                      <i class="fa-brands fa-instagram"></i>
-                      </a>
-                      <a class="text-white" href="https://www.linkedin.com/in/navid-salehi-3b4a57341/">
-                          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="17" height="17" viewBox="0,0,256,256" style="fill:#FFFFFF;">
-                          <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M19,3h-14c-1.105,0 -2,0.895 -2,2v14c0,1.105 0.895,2 2,2h14c1.105,0 2,-0.895 2,-2v-14c0,-1.105 -0.895,-2 -2,-2zM7.738,17v0c-0.697,0 -1.262,-0.565 -1.262,-1.262v-4.477c0.001,-0.696 0.566,-1.261 1.262,-1.261v0c0.697,0 1.262,0.565 1.262,1.262v4.477c0,0.696 -0.565,1.261 -1.262,1.261zM7.694,8.717c-0.771,0 -1.286,-0.514 -1.286,-1.2c0,-0.686 0.514,-1.2 1.371,-1.2c0.771,0 1.286,0.514 1.286,1.2c0,0.686 -0.514,1.2 -1.371,1.2zM16.779,17v0c-0.674,0 -1.221,-0.547 -1.221,-1.221v-2.605c0,-1.058 -0.651,-1.174 -0.895,-1.174c-0.244,0 -1.058,0.035 -1.058,1.174v2.605c0,0.674 -0.547,1.221 -1.221,1.221h-0.081c-0.674,0 -1.221,-0.547 -1.221,-1.221v-4.517c0,-0.697 0.565,-1.262 1.262,-1.262v0c0.697,0 1.262,0.565 1.262,1.262c0,0 0.282,-1.262 2.198,-1.262c1.219,0 2.196,0.977 2.196,3.174v2.605c0,0.674 -0.547,1.221 -1.221,1.221z"></path></g></g>
-                          </svg>
-                      </a>
-                  </div>
-                  <div class="d-flex align-items-center gap-3">
-                      <i class="fa-solid fa-phone"></i>
-                      <p class="my-auto">09128391641</p>
-                  </div>
-                  <div class="d-flex align-items-center gap-3">
-                      <i class="fa-solid fa-envelope"></i>
-                      <p class="my-auto">navidslh2@gmail.com</p>
-                  </div>
-              </div>    
-              </div>
-              <!--finish buttom side of footer-->
+              <div class="mt-2">
+                <p class="lh-lg">من نوید صالحی هستم، بعد از چندین سال کار در حوزه حسابداری، تصمیم گرفتم مسیر جدیدی را در برنامه‌نویسی آغاز کنم. حدود یک سال است که در مسیر یادگیری برنامه‌نویسی قدم گذاشته‌ام و هدفم ورود به بازار کار به‌عنوان یک برنامه‌نویس وب است.به یادگیری و توسعه‌ی مهارت‌های جدید علاقه دارم و مشتاقم که در این مسیر پیشرفت کنم.</p>
+              </div>   
+            </div> 
+            <!--finish top side of footer-->
+            <!--start middle side of footer-->
+            <div class="d-flex flex-column gap-2 mb-2 mt-4">
+                <h4>مهارت‌ها و پروژه‌ها</h4>
+                <div class="d-flex flex-column gap-2 ps-2">
+                    <a href="https://github.com/navidslh2/cv" target="_blank"  class="d-flex align-items-center justify-content-start gap-3 pt-2 text-white">
+                        <i class="fa-brands fa-github"></i>
+                        <p class="my-auto">لینک گیت</p>
+                    </a>
+                    <a href="./project.html" target="_blank" class="d-flex align-items-center justify-content-start gap-3 text-white">
+                        <i class="fa-solid fa-pen-nib"></i>
+                        <p class="my-auto">پروژه ها</p>
+                    </a>
+                    <a href="./abilities.html" target="_blank" class="d-flex align-items-center justify-content-start gap-3 text-white">
+                        <i class="fas fa-bolt"></i>
+                        <p class="my-auto">توانایی ها</p>
+                    </a>
+                    <a href="./download/NavidSalehi.pdf" download class="d-flex align-items-center justify-content-start gap-3 text-white">
+                        <i class="fa-solid fa-download"></i>
+                        <p class="my-auto">دانلود رزومه</p>
+                    </a>
+                </div>
             </div>
+            <!--finish middle side of footer-->
+            <!--start buttom side of footer-->
+            <div class="d-flex flex-column gap-2 mt-5 mb-3">
+              <h4>راه های ارتباطی با من</h4>
+              <div class="d-flex flex-column gap-2 ps-3">
+                <div class="d-flex align-items-center gap-2 pt-1">
+                    <a class="text-white" href="https://t.me/navidslh" target="_blank">
+                    <i class="fa-brands fa-telegram" ></i>
+                    </a>
+                    <a class="text-white" href="https://instagram.com/navidslh" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a class="text-white pb-1" href="https://www.linkedin.com/in/navid-salehi-3b4a57341/">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="17" height="17" viewBox="0,0,256,256" style="fill:#FFFFFF;">
+                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M19,3h-14c-1.105,0 -2,0.895 -2,2v14c0,1.105 0.895,2 2,2h14c1.105,0 2,-0.895 2,-2v-14c0,-1.105 -0.895,-2 -2,-2zM7.738,17v0c-0.697,0 -1.262,-0.565 -1.262,-1.262v-4.477c0.001,-0.696 0.566,-1.261 1.262,-1.261v0c0.697,0 1.262,0.565 1.262,1.262v4.477c0,0.696 -0.565,1.261 -1.262,1.261zM7.694,8.717c-0.771,0 -1.286,-0.514 -1.286,-1.2c0,-0.686 0.514,-1.2 1.371,-1.2c0.771,0 1.286,0.514 1.286,1.2c0,0.686 -0.514,1.2 -1.371,1.2zM16.779,17v0c-0.674,0 -1.221,-0.547 -1.221,-1.221v-2.605c0,-1.058 -0.651,-1.174 -0.895,-1.174c-0.244,0 -1.058,0.035 -1.058,1.174v2.605c0,0.674 -0.547,1.221 -1.221,1.221h-0.081c-0.674,0 -1.221,-0.547 -1.221,-1.221v-4.517c0,-0.697 0.565,-1.262 1.262,-1.262v0c0.697,0 1.262,0.565 1.262,1.262c0,0 0.282,-1.262 2.198,-1.262c1.219,0 2.196,0.977 2.196,3.174v2.605c0,0.674 -0.547,1.221 -1.221,1.221z"></path></g></g>
+                        </svg>
+                    </a>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <i class="fa-solid fa-phone"></i>
+                    <p class="my-auto">09128391641</p>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p class="my-auto">navidslh2@gmail.com</p>
+                </div>
+            </div>    
+            </div>
+            <!--finish buttom side of footer-->
+        </div>
+        <!--finish footer for smaller than lg size-->
       </div>
     </footer>
     <script type="module" src="./js/main.js"></script>

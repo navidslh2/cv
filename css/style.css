@@ -1,6 +1,5 @@
 @import url(./bootstrap.css);
 @import url(./fontawesome/all.css);
-/* @import url(./webfonts); */
 
 @font-face {
     font-family: kalame;
@@ -26,11 +25,12 @@ ul{
 body{
     color: black !important;
     font-family: kalame;
+    overflow-x: hidden;
 }
 a {
     text-decoration: none;
     color: black;
-    /* color: white; */
+
 }
 p{
     text-align: justify;
@@ -41,13 +41,7 @@ p{
 .bg_gray {
     background-color: var(--gray-color);
 }
-/* .fix_header{
-    position:fixed;
-    z-index: 10;
-    top: 0;
-    right: 0;
-    width: 100%;
-} */
+
 .hover_blue{
   width: fit-content;
   transition: all 0.5 ease-in-out;
@@ -69,15 +63,27 @@ p{
 .border_hover:hover{
     border-bottom: solid 1px var(--hover-color);
 }
-/* @media screen and (max-width:999px) {
-    body{
-        font-size: 80%;
-    }
-    h1, h2, h3, h4, h5, h6, p {
-        font-size: 99%;
-    }
-} */
+.menu_overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
 
+.menu_overlay.active_overlay {
+    opacity: 1;
+    pointer-events: all;
+}
 
 /* start header style for bigger than lg*/
 .menu{
@@ -86,6 +92,8 @@ p{
     background-color: var(--yellow-color);
     margin: 0;
     padding: 0;
+    position: fixed;
+    z-index: 3;
 }
 .menu ul{
     width: 100%;
@@ -114,6 +122,7 @@ p{
     -moz-transition: all 0.5s ease-in-out;
     -ms-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
+    background-color: whitesmoke;
 }
 .drupdown li{
     line-height: 30px !important;
@@ -134,15 +143,27 @@ p{
     color: var(--hover-color) !important;
     border-right: solid 2px var(--hover-color);
 }
+/* finish header style for bigger than lg*/
 /* start header style for smaller than lg*/
+.bars{
+    background-color: var(--yellow-color) !important;
+    width: 100%;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    z-index: 3;
+}
 .icon_bars{
     font-size: 20px;
+    z-index: 3;
+    padding-right: 20px;
 }
 
 .menu_small{
     width: 0;
     background-color: var(--yellow-color);
-    z-index: 1;
+    z-index: 3;
     right: 0;
     top: 0;
     position: absolute;
@@ -211,31 +232,30 @@ p{
     -ms-transform: rotate(0deg);
     -o-transform: rotate(0deg);
 }
+/* finish header style for smaller than lg*/
 /* finish header style */
 /* start intrduce style */
 .image-container{
+    margin-top: 70px;
     position: relative;
+    z-index: 0;
 }
 
 @media screen and (max-width:1200px) {
     .image-container::before{
         content: '';
         background-color: var(--yellow-color);
-        /* background-image: url(../img/Untitled-2\ copy.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain; */
         width: 100%;
-        height: 45rem;
+        height: 650px;
         position: absolute;
-        z-index: -1;   
+        z-index: 0;   
     }
 
     .image_nav{
-        height: 41rem;
+        height: 600px;
        }
     .introduce{
-        margin-top: 4rem !important;
+        margin-top: 100px !important;
         margin-right: 0 !important;
     }
     
@@ -243,12 +263,10 @@ p{
 .image-container::before{
     content: '';
     background-color: var(--yellow-color);
-    /* background-image: url(../img/Untitled-2\ copy.png); */
-    /* background-position-x: 120%;
-    background-repeat: no-repeat; */
-    height: 712px;
+
+    height: 722px;
     position: absolute;
-    top: -56px;
+    top: -70px;
     left: 0;
     width: 100%;
     z-index: -1;  
@@ -269,7 +287,7 @@ p{
     }
 }
 .image_nav{
-    height: 657px;
+    height: 652px;
 }
 /* finish intrduce style */
 /* start card style */
@@ -373,11 +391,11 @@ p{
     position: relative;
     background: radial-gradient(circle, var(--yellow-color), #ffe08d);
     opacity: 1;
-    transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
-    -moz-transform: translateX(-100%);
-    -ms-transform: translateX(-100%);
-    -o-transform: translateX(-100%);
+    transform: translateX(-25%);
+    -webkit-transform: translateX(-25%);
+    -moz-transform: translateX(-25%);
+    -ms-transform: translateX(-25%);
+    -o-transform: translateX(-25%);
 }    
 .card p{
     margin-top: 5px;
@@ -473,22 +491,14 @@ footer{
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
 }
-/* .asd{
-    display: flex;
-    align-items: center;
-    justify-content:right;
-    margin-bottom: 10px;
-    gap: 5px;
-    
-} */
 /* finish footer style*/
 /* start project page */
 .main_container{
-    margin-top: 7rem;
+    
 }
 .my_project{
-    position: relative
-    ;
+    position: relative;
+    margin-top: 100px;
 }
 .my_project::before{
     content: '';
@@ -524,63 +534,6 @@ footer{
     color: black !important;
     font-weight:300 !important;
 }
-/* .breadcrumb-item {
-    border-radius: 0 0.5rem 0.5rem 0;
-    padding-left: 15px;
-    -webkit-border-radius: 0 0.5rem 0.5rem 0;
-    -moz-border-radius: 0 0.5rem 0.5rem 0;
-    -ms-border-radius: 0 0.5rem 0.5rem 0;
-    -o-border-radius: 0 0.5rem 0.5rem 0;
-} */
-
-/* .breadcrumb {
-    display: flex;
-    align-items: center;
-    background: #f8f9fa;
-    padding: 10px;
-    border-radius: 10px;
-    list-style: none;
-    overflow: hidden;
-} */
-
-/* .breadcrumb-item {
-    position: relative;
-    padding: 10px 20px;
-    background: #fff;
-    border-right: 1px solid #ddd;
-    font-weight: bold;
-    color: #333;
-    text-decoration: none;
-} */
-
-/* .breadcrumb-item a {
-    text-decoration: none;
-    color: #333;
-}
-
-
-
-.breadcrumb-item:last-child {
-    border-radius: 0 8px 8px 0;
-    background: #f0f0f0;
-    color: #000;
-}
-
-.breadcrumb-item::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: -10px;
-    width: 20px;
-    height: 100%;
-    background: inherit;
-    clip-path: polygon(100% 50%, 0 0, 0 100%);
-}
-
-.breadcrumb-item:last-child::after {
-    display: none;
-} */
-
 
 /* finish project page*/
 
@@ -589,8 +542,6 @@ footer{
 .swiper {
     width: 100%;
     height: 100%;
-    
-    
 }
   
 .swiper-slide img {
@@ -598,8 +549,6 @@ footer{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    
-    
 }
 .swiper-pagination-bullet {
     background: white !important;
@@ -665,11 +614,3 @@ footer{
     -o-transform: translateY(-50%);
 }
 /* finish abilities page */
-
-/* اضافه */
-@media (max-width: 1200px) {
-    .container-xl {
-        max-width: 100% !important;
-        padding: 0 15px;
-    }
-}

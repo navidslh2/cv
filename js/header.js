@@ -50,14 +50,24 @@ let smallHeader=()=>{
         }
     });  
 }
-let openMenu=()=>{
-    
+let openMenu=()=>{ 
     let menu=document.querySelector(".menu_small")
+    let overlay=document.querySelector(".menu_overlay")
+    if(!overlay){
+        overlay=document.createElement("div")
+        overlay.classList.add("menu_overlay")
+        document.body.appendChild(overlay)
+    }
     let showMenu=(elem)=>{
         let bars=document.querySelector(".bars")
         elem.stopPropagation()
         bars.remove()    
         menu.classList.add("active_menu_small")
+        overlay.classList.add("active_overlay")
+        window.scrollTo({
+            top:0,
+            behavior: "smooth"
+        })
     }
     let bars=document.querySelector(".bars")
     if(bars){
@@ -66,10 +76,11 @@ let openMenu=()=>{
     document.addEventListener("click", (elem)=>{
         if(!elem.target.closest(".menu_small")) {
             menu.classList.remove("active_menu_small")
+            overlay.classList.remove("active_overlay")
             let checkBars=document.querySelector(".bars")
             if(!checkBars){
                 let newBars=document.createElement("button")
-                newBars.className="bars border-0 pt-3 ps-4 bg-white"
+                newBars.className="bars w-100  border-0 bg-white d-flex align-items-center justify-content-start z-3"
                 newBars.innerHTML=`<i class="fa-solid fa-bars icon_bars d-lg-none"></i>`
                 menu.parentNode.insertBefore(newBars,menu)
                 newBars.addEventListener("click",showMenu)

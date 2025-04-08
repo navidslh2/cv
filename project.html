@@ -10,25 +10,49 @@
 <body>
     <header>
       <!-- start header-->
-      <nav class="navbar navbar-expand-xl bg_yellow shadow-sm p-3 fix_header">
-        <div class="container-fluid container-xl">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+      <!--start header for bigger than lg -->
+      <div class="menu d-none d-lg-block position-fixed">
+        <nav class="container-fluid container-xl">
+            <ul class="d-flex align-items-center justify-content-start gap-4 ps-5">
+                <li><a class="hover_blue" href="./index.html">خانه</a></li>
+                <li ><a class="hover_blue" href="./abilities.html" target="_blank">توانایی ها</a></li>
+                <li class="hover_blue">پروژه ها
+                    <i class="fa-solid fa-angle-down ps-1"></i>
+                    <div class="drupdown">
+                        <ul class="d-flex flex-column gap-2">
+                            <li class="drupdown_hover"><a class="hover_blue" href="./project.html" target="_blank">پایتون</a></li>
+                            <li class="drupdown_hover"><a class="hover_blue" href="./project.html" target="_blank">جاوا اسکریپت</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+      </div>
+      <!--finish header for bigger than lg -->
+      <!--start header for smaller than lg -->
+      <div class="d-lg-none">
+          <button class="bars w-100  border-0 bg-white d-flex align-items-center justify-content-start">
+              <i class="fa-solid fa-bars icon_bars"></i>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link mx-1" href="./index.html" target="_blank">خانه</a>
-              <a class="nav-link mx-1" href="./abilities.html" target="_blank">توانایی ها</a>
-              <a class="nav-link mx-1 hover_blue" href="./project.html">پروژه ها</a>
-            </div>
+          <div class="menu_small bg_yellow">  
+              <nav class="w-100">
+                  <ul class="d-flex flex-column justify-content-center align-items-center gap-4 pt-5">
+                      <li class="ps-2"><a class="hover_blue" href="./index.html">خانه</a></li>
+                      <li class="ps-2"><a class="hover_blue" href="./abilities.html" target="_blank">توانایی ها</a></li>
+                      <li class="hover_blue ps-2">پروژه ها
+                          <i class="fa-solid fa-angle-left ps-1 icon"></i>
+                          <div class="drupdown_small">
+                              <ul class="d-flex flex-column gap-4">
+                                  <li class="drupdown_hover"><a class="hover_blue" href="./project.html" target="_blank">پایتون</a></li>
+                                  <li class="drupdown_hover"><a class="hover_blue" href="./project.html" target="_blank">جاوا اسکریپت</a></li>
+                              </ul>
+                          </div>
+                      </li>
+                  </ul>
+              </nav>
           </div>
-          <!-- <div>
-            <button class="bg-transparent border-1 rounded-2 p-2 me-3">
-                <a class="text-dark" href="#">درخواست همکاری</a>
-            </button>
-          </div> -->
-        </div>
-      </nav>
+      </div>
+      <!--finish header for smaller than lg -->
       <!--finish header-->   
     </header>    
     <main>
