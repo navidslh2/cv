@@ -5,7 +5,7 @@ let slide=async()=>{
         let data=await fetch("http://localhost:3000/slide")
         let res= await data.json()
         addImage=res.map(elem=>{
-            return `<div class="swiper-slide"><img src="${elem.image}" alt="${elem.alt}"></div>`
+            return `<div class="swiper-slide"><img src="${elem.image}" alt="${elem.alt} loading="lazy""></div>`
         })
         document.querySelector(".swiper-wrapper").innerHTML=addImage.join("")
         let swiper = new Swiper(".mySwiper", {
