@@ -44,44 +44,15 @@ p {
 .hover_blue {
   width: fit-content;
   transition: all 0.5 ease-in-out;
-  -webkit-transition: all 0.5 ease-in-out;
-  -moz-transition: all 0.5 ease-in-out;
-  -ms-transition: all 0.5 ease-in-out;
-  -o-transition: all 0.5 ease-in-out;
 }
 .border_hover {
   transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
 }
 .hover_blue:hover {
   color: var(--hover-color) !important;
 }
 .border_hover:hover {
   border-bottom: solid 1px var(--hover-color);
-}
-.menu_overlay {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 0;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-}
-
-.menu_overlay.active_overlay {
-  opacity: 1;
-  pointer-events: all;
 }
 
 /* start header style for bigger than lg*/
@@ -109,18 +80,10 @@ p {
   position: absolute;
   padding: 10px 0;
   border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
   opacity: 0;
   color: black;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.377);
   transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
   background-color: whitesmoke;
 }
 .drupdown li {
@@ -133,10 +96,6 @@ p {
 }
 .drupdown_hover {
   transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
 }
 .drupdown_hover:hover {
   color: var(--hover-color) !important;
@@ -168,10 +127,6 @@ p {
   position: absolute;
   overflow: hidden;
   transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
 }
 .active_menu_small {
   width: 100px !important;
@@ -198,10 +153,6 @@ p {
   padding-right: 4px;
   z-index: 2;
   transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
 }
 .active_drupdown_small {
   opacity: 1 !important;
@@ -209,24 +160,30 @@ p {
 }
 .icon {
   transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
 }
 .rotate-up {
   transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
+
 }
 .rotate-left {
   transform: rotate(0deg);
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
+}
+.menu_overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu_overlay.active_overlay {
+  opacity: 1;
+  pointer-events: all;
 }
 /* finish header style for smaller than lg*/
 /* finish header style */
@@ -258,7 +215,6 @@ p {
 .image-container::before {
   content: "";
   background-color: var(--yellow-color);
-
   height: 722px;
   position: absolute;
   top: -70px;
@@ -300,10 +256,6 @@ p {
   right: 3px;
   top: -9px;
   border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
 }
 .card {
   width: 280px;
@@ -314,15 +266,6 @@ p {
   transition: all 1s ease-in-out;
   transform: translateY(40px);
   animation: fadeInUp 0.8s ease-in-out forwards;
-  -webkit-animation: fadeInUp 0.8s ease-in-out forwards;
-  -webkit-transform: translateY(40px);
-  -moz-transform: translateY(40px);
-  -ms-transform: translateY(40px);
-  -o-transform: translateY(40px);
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
 }
 @keyframes fadeInUp {
   0% {
@@ -345,10 +288,6 @@ p {
   top: 0;
   right: 50%;
   transform: translate(50%);
-  -webkit-transform: translate(50%);
-  -moz-transform: translate(50%);
-  -ms-transform: translate(50%);
-  -o-transform: translate(50%);
   width: 170px;
   height: 120px;
   background: rgba(0, 0, 0, 0.1);
@@ -363,10 +302,6 @@ p {
   position: absolute;
   right: 50%;
   transform: translateX(50%);
-  -webkit-transform: translateX(50%);
-  -moz-transform: translateX(50%);
-  -ms-transform: translateX(50%);
-  -o-transform: translateX(50%);
 }
 .card img {
   width: 170px;
@@ -386,10 +321,6 @@ p {
   background: radial-gradient(circle, var(--yellow-color), #ffe08d);
   opacity: 1;
   transform: translateX(-25%);
-  -webkit-transform: translateX(-25%);
-  -moz-transform: translateX(-25%);
-  -ms-transform: translateX(-25%);
-  -o-transform: translateX(-25%);
 }
 .card p {
   margin-top: 5px;
@@ -399,31 +330,15 @@ p {
   box-shadow: none;
   opacity: 0;
   transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
 }
 .card:hover .img_card {
   opacity: 0;
   transform: translate(50%, 50%);
   transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -webkit-transform: translate(50%, 50%);
-  -moz-transform: translate(50%, 50%);
-  -ms-transform: translate(50%, 50%);
-  -o-transform: translate(50%, 50%);
 }
 .card:hover .discription {
   padding-top: 40px;
   transition: all 1s ease-in-out;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
   box-shadow: 10px 10px 60px rgba(61, 61, 61, 0.623);
 }
 
@@ -450,15 +365,7 @@ p {
 .active_discription {
   opacity: 1 !important;
   transition: all 0.6s ease-in-out;
-  -webkit-transition: all 0.6s ease-in-out;
-  -moz-transition: all 0.6s ease-in-out;
-  -ms-transition: all 0.6s ease-in-out;
-  -o-transition: all 0.6s ease-in-out;
   transform: translateX(0);
-  -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
 }
 /* finish card style */
 /* start footer style*/
@@ -553,48 +460,28 @@ footer {
   content: "";
   background-color: var(--yellow-color);
   position: absolute;
-  width: 0.4rem;
-  height: 39rem;
-  border-radius: 1rem;
-  -webkit-border-radius: 1rem;
-  -moz-border-radius: 1rem;
-  -ms-border-radius: 1rem;
-  -o-border-radius: 1rem;
+  width: 6px;
+  height: 620px;
+  border-radius: 10px;
 }
 .circle_of_line_right {
   position: absolute;
   background-color: var(--yellow-color);
-  width: 1.3rem;
-  height: 1.3rem;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  left: -1.65rem;
+  left: -27px;
   top: 50%;
   transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
 }
 .circle_of_line_left {
   position: absolute;
   background-color: var(--yellow-color);
-  width: 1.3rem;
-  height: 1.3rem;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  right: -1.65rem;
+  right: -27px;
   top: 50%;
   transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
 }
 /* finish abilities page */

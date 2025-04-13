@@ -31,5 +31,5 @@ let slide=async()=>{
         console.log(error)
     }
 }
+slide()
 
-export default slide

@@ -14,5 +14,4 @@ const Slider=async()=>{
     }
     
 }
-
-export default Slider
+Slider()

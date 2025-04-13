@@ -63,4 +63,4 @@ let card = () => {
   });
 };
 
-export { getCardData, card };
+getCardData()
