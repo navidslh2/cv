@@ -20,8 +20,16 @@
                     <i class="fa-solid fa-angle-down ps-1"></i>
                     <div class="drupdown">
                         <ul class="d-flex flex-column gap-2">
-                            <li class="drupdown_hover"><a class="hover_blue" href="./project.html" target="_blank">پایتون</a></li>
-                            <li class="drupdown_hover"><a class="hover_blue" href="./project.html" target="_blank">جاوا اسکریپت</a></li>
+                            <li class="drupdown_hover"><a class="hover_blue" href="./project.html" target="_blank">نمایش کد</a></li>
+                            <li class="drupdown_hover position-relative submenu">اجرای پروژه
+                              <i class="fa-solid fa-angle-left ps-1"></i>
+                              <div class="drupdown-left">
+                                <ul>
+                                  <li class="drupdown_hover"><a class="hover_blue" href="./alarmclock.html" target="_blank">ساعت</a></li>
+                                  <li class="drupdown_hover"><a class="hover_blue" href="./captcha.html" target="_blank">کپچا</a></li>
+                                </ul>
+                              </div>
+                            </li>
                         </ul>
                     </div>
                 </li>
@@ -39,12 +47,21 @@
                   <ul class="d-flex flex-column justify-content-center align-items-center gap-4 pt-5">
                       <li class="ps-2"><a class="hover_blue" href="./index.html">خانه</a></li>
                       <li class="ps-2"><a class="hover_blue" href="./abilities.html" target="_blank">توانایی ها</a></li>
-                      <li class="hover_blue ps-2">پروژه ها
-                          <i class="fa-solid fa-angle-left ps-1 icon"></i>
+                      <li class="hover_blue ps-2 position-relative" style="cursor: pointer;">پروژه ها 
+                          <i class="fa-solid fa-angle-left ps-1 first-icon icon"></i>
                           <div class="drupdown_small">
                               <ul class="d-flex flex-column gap-4">
-                                  <li class="drupdown_hover"><a class="hover_blue" href="./project.html" target="_blank">پایتون</a></li>
-                                  <li class="drupdown_hover"><a class="hover_blue" href="./project.html" target="_blank">جاوا اسکریپت</a></li>
+                                  <li class="drupdown_hover"><a class="hover_blue" href="./project.html" target="_blank">نمایش کد</a></li>
+                                  <li class="drupdown_hover drupdown_second_toggle" style="cursor: pointer;">اجرای پروژه
+                                    <i class="fa-solid fa-angle-left ps-1 second-icon icon"></i>
+                                    <div class="drupdown-second">
+                                      <ul class="d-flex flex-column gap-4">
+                                        <li class="drupdown_hover"><a class="hover_blue" href="./alarmclock.html" target="_blank">ساعت</a></li>
+                                        <li class="drupdown_hover"><a class="hover_blue" href="./captcha.html" target="_blank">کپچا</a></li>
+                                      </ul>
+                                    </div>
+
+                                  </li>
                               </ul>
                           </div>
                       </li>
@@ -232,6 +249,7 @@
     <script type="module" src="./js/main.js"></script>
     <script src="./js/card.js"></script>
     <script src="./js/nameAnimation.js"></script>
+    <!-- <script src="./js/h.js"></script> -->
 </body>
 </html>
 

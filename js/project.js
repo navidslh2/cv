@@ -8,7 +8,6 @@ let showCode=async(project)=> {
     try{
         let data=await fetch("http://localhost:3000/project")
         let res=await data.json()
-        console.log(res)
         codeContent.innerText = ""
         codeContent.classList.add("active_codebox")
         codeContent.innerText = res[project].code.join("\n") 
@@ -16,14 +15,30 @@ let showCode=async(project)=> {
         btnGit.classList.remove('disabled')
         btnGit.href = res[project].gitLink
     }catch(error){
-        console.log(error)
     }    
 }
 
 function copyCode() {
     let code = document.getElementById('code-content').innerText;
     navigator.clipboard.writeText(code);
-    alert('کد کپی شد')
+    let message = document.createElement("div")
+    message.classList.add("message")
+    message.innerText = "کد کپی شد"
+    document.body.appendChild(message)
+    setTimeout(() => {
+        let opacity = 1
+        setInterval(() => {
+            opacity -= 0.1
+            message.style.opacity = opacity
+            if (opacity <= 0){
+                message.remove()
+            }
+        }, 100);
+    }, 1000);
 }
 
-export {showCode,copyCode}
+let copy = document.getElementById("btnCopy")
+copy.addEventListener("click", copyCode)
+
+
+showCode()

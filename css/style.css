@@ -75,7 +75,7 @@ p {
   line-height: 60px;
 }
 .drupdown {
-  width: 120px;
+  width: 100px;
   height: 0;
   position: absolute;
   padding: 10px 0;
@@ -95,12 +95,40 @@ p {
   height: 100px;
 }
 .drupdown_hover {
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
 }
 .drupdown_hover:hover {
   color: var(--hover-color) !important;
   border-right: solid 2px var(--hover-color);
 }
+.drupdown-left {
+  width: 0;
+  height: 90px;
+  background-color: whitesmoke;
+  position: absolute;
+  right: 98px;
+  top: -5px;
+  border-radius: 5px 0 5px 5px;
+  color: black;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.377);
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+  opacity: 1;
+  z-index: -1;
+}
+.drupdown-left ul {
+  height: 50px;
+  padding: 5px 10px;
+}
+.active-drupdown-left {
+  opacity: 1 !important;
+  width: 100px !important;
+}
+
 /* finish header style for bigger than lg*/
 /* start header style for smaller than lg*/
 .bars {
@@ -110,18 +138,18 @@ p {
   margin: 0;
   padding: 0;
   position: fixed;
-  z-index: 3;
+  z-index: 1;
 }
 .icon_bars {
   font-size: 20px;
-  z-index: 3;
+  z-index: 1;
   padding-right: 20px;
 }
 
 .menu_small {
   width: 0;
   background-color: var(--yellow-color);
-  z-index: 3;
+  z-index: 4;
   right: 0;
   top: 0;
   position: absolute;
@@ -146,8 +174,9 @@ p {
 
 .drupdown_small {
   width: 100px;
-  height: 0;
+  height: 80px;
   right: 0;
+  top: 25px;
   position: absolute;
   opacity: 0;
   padding-right: 4px;
@@ -158,15 +187,37 @@ p {
   opacity: 1 !important;
   height: 100px !important;
 }
-.icon {
+.icon{
   transition: all 0.5s ease-in-out;
+
 }
+
 .rotate-up {
-  transform: rotate(90deg);
+  transform: rotate(90deg) !important ;
 
 }
 .rotate-left {
-  transform: rotate(0deg);
+  transform: rotate(0deg) !important ;
+
+}
+.drupdown-second{
+  width: 100px;
+  height: 40px;
+  right: 0;
+  top: 100px;
+  position: absolute;
+  opacity: 0;
+  padding-right: 4px;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+}
+.active_drupdown_second {
+  height: 100px !important;
+  opacity: 1 !important;
+}
+
+.drupdown-second li{
+  height: 30px;
 }
 .menu_overlay {
   position: fixed;
@@ -175,10 +226,10 @@ p {
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 0;
+  z-index: 2;
   opacity: 0;
   pointer-events: none;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .menu_overlay.active_overlay {
@@ -201,7 +252,7 @@ p {
     width: 100%;
     height: 650px;
     position: absolute;
-    z-index: 0;
+    z-index: -1;
   }
 
   .image_nav {
@@ -271,10 +322,7 @@ p {
   0% {
     opacity: 0;
     transform: translateY(40px);
-    -webkit-transform: translateY(40px);
-    -moz-transform: translateY(40px);
-    -ms-transform: translateY(40px);
-    -o-transform: translateY(40px);
+
   }
   100% {
     opacity: 1;
@@ -425,6 +473,36 @@ footer {
 .active_codebox {
   color: black !important;
   font-weight: 300 !important;
+}
+.message {
+  width: 300px;
+  height: 50px;
+  background-color: #ffba3a5b;
+  border: solid 1px var(--yellow-color);
+  border-radius: 5px;
+  position: fixed;
+  top: 80vh;
+  left: 50px;
+  color: rgb(71, 71, 71);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: alert 1s;
+}
+@keyframes alert {
+  0%{
+    transform: translateX(-200%);  
+  }
+  100% {
+    transform: translateX(0);
+}
+}
+@media screen and (max-width:900px) {
+  .message{
+    width: 150px;
+    left: 20px;
+  }
 }
 
 /* finish project page*/

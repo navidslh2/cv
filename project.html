@@ -11,7 +11,7 @@
     <header>
       <!-- start header-->
       <!--start header for bigger than lg -->
-      <div class="menu d-none d-lg-block position-fixed">
+      <div class="menu d-none d-lg-block">
         <nav class="container-fluid container-xl">
             <ul class="d-flex align-items-center justify-content-start gap-4 ps-5">
                 <li><a class="hover_blue" href="./index.html">خانه</a></li>
@@ -20,8 +20,16 @@
                     <i class="fa-solid fa-angle-down ps-1"></i>
                     <div class="drupdown">
                         <ul class="d-flex flex-column gap-2">
-                            <li class="drupdown_hover"><a class="hover_blue" href="./project.html" target="_blank">پایتون</a></li>
-                            <li class="drupdown_hover"><a class="hover_blue" href="./project.html" target="_blank">جاوا اسکریپت</a></li>
+                            <li class="drupdown_hover"><a class="hover_blue" href="./project.html" target="_blank">نمایش کد</a></li>
+                            <li class="drupdown_hover position-relative submenu">اجرای پروژه
+                              <i class="fa-solid fa-angle-left ps-1"></i>
+                              <div class="drupdown-left">
+                                <ul>
+                                  <li class="drupdown_hover"><a class="hover_blue" href="./alarmclock.html" target="_blank">ساعت</a></li>
+                                  <li class="drupdown_hover"><a class="hover_blue" href="./captcha.html" target="_blank">کپچا</a></li>
+                                </ul>
+                              </div>
+                            </li>
                         </ul>
                     </div>
                 </li>
@@ -30,21 +38,30 @@
       </div>
       <!--finish header for bigger than lg -->
       <!--start header for smaller than lg -->
-      <div class="d-lg-none">
-          <button class="bars w-100  border-0 bg-white d-flex align-items-center justify-content-start">
+      <div class="d-lg-none bg-white">
+          <button class="bars w-100  border-0 d-flex align-items-center justify-content-start bg-white">
               <i class="fa-solid fa-bars icon_bars"></i>
           </button>
-          <div class="menu_small bg_yellow">  
+          <div class="menu_small bg-white">  
               <nav class="w-100">
                   <ul class="d-flex flex-column justify-content-center align-items-center gap-4 pt-5">
                       <li class="ps-2"><a class="hover_blue" href="./index.html">خانه</a></li>
                       <li class="ps-2"><a class="hover_blue" href="./abilities.html" target="_blank">توانایی ها</a></li>
-                      <li class="hover_blue ps-2">پروژه ها
-                          <i class="fa-solid fa-angle-left ps-1 icon"></i>
+                      <li class="hover_blue ps-2 position-relative" style="cursor: pointer;">پروژه ها 
+                          <i class="fa-solid fa-angle-left ps-1 first-icon icon"></i>
                           <div class="drupdown_small">
                               <ul class="d-flex flex-column gap-4">
-                                  <li class="drupdown_hover"><a class="hover_blue" href="./project.html" target="_blank">پایتون</a></li>
-                                  <li class="drupdown_hover"><a class="hover_blue" href="./project.html" target="_blank">جاوا اسکریپت</a></li>
+                                  <li class="drupdown_hover"><a class="hover_blue" href="./project.html" target="_blank">نمایش کد</a></li>
+                                  <li class="drupdown_hover drupdown_second_toggle" style="cursor: pointer;">اجرای پروژه
+                                    <i class="fa-solid fa-angle-left ps-1 second-icon icon"></i>
+                                    <div class="drupdown-second">
+                                      <ul class="d-flex flex-column gap-4">
+                                        <li class="drupdown_hover"><a class="hover_blue" href="./alarmclock.html" target="_blank">ساعت</a></li>
+                                        <li class="drupdown_hover"><a class="hover_blue" href="./captcha.html" target="_blank">کپچا</a></li>
+                                      </ul>
+                                    </div>
+
+                                  </li>
                               </ul>
                           </div>
                       </li>
@@ -53,7 +70,7 @@
           </div>
       </div>
       <!--finish header for smaller than lg -->
-      <!--finish header-->   
+      <!--finish header--> 
     </header>    
     <main>
       <div class="container-fluid container-xl d-flex flex-column main_container">
@@ -85,7 +102,7 @@
           <code id="code-content" class="text-black-50 fs-6 fw-bold">برای مشاهده کد روی پروژه مد نظر کلیک کنید</code>
         </pre>
         <div class="d-flex">
-          <button type="button" class="btn btn-warning ms-3 disabled" id="btnCopy" onclick="copyCode()">کپی کد</button>
+          <button type="button" class="btn btn-warning ms-3 disabled" id="btnCopy">کپی کد</button>
           <a href="" target="_blank" class="btn btn-warning ms-4 disabled" id="btnGit">مشاهده git</a>
         </div>
         
@@ -232,5 +249,6 @@
       </div>
     </footer>
     <script type="module" src="./js/main.js"></script>
+    <script src="./js/project.js"></script>
 </body>
 </html>

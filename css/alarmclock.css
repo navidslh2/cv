@@ -1,0 +1,116 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(195, 204, 67);
+}
+.container {
+  width: 500px;
+  height: 500px;
+  background-color: whitesmoke;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  gap: 20px;
+
+  .content {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    .controler {
+      width: calc(100% / 2);
+      height: 100%;
+      padding: 0 20px;
+    }
+    & select {
+      width: 100%;
+      height: 25px;
+      cursor: pointer;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+      & option {
+        height: 100%;
+      }
+    }
+  }
+}
+.alarm {
+  width: 100%;
+  height: 30px;
+  padding: 0 50px;
+  & button {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(195, 204, 67);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border: none;
+    box-shadow: 3px 3px 20px black;
+    cursor: pointer;
+    transition: all 0.5 ease-in-out;
+  }
+}
+button:active {
+  animation: click 0.5s;
+  -webkit-animation: click 0.5s;
+}
+@keyframes click {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.message {
+  width: 300px;
+  height: 50px;
+  background-color: rgba(245, 245, 245, 0.664);
+  border: solid 2px rgb(195, 204, 67);
+  border-radius: 5px;
+  position: absolute;
+  top: 50px;
+  right: 50%;
+  transform: translateX(50%);
+  color: rgb(71, 71, 71);
+  font-weight: bold;
+  animation: alert 2s;
+  -webkit-animation: alert 1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@keyframes alert {
+  0% {
+    transform: translate(50%, -300%);
+  }
+  100% {
+    transform: translate(50%, 0);
+  }
+}
+@media screen and (max-width:600px){
+    .container{
+        width: 90%;
+        .controler{
+            padding: 0;
+        }
+    }
+}
